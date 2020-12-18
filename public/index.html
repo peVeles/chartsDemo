@@ -1,0 +1,31 @@
+<html>
+
+<head>
+  <title>Express</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div class="header">
+    <h3>Charts sample - for each chart we have new socket</h3>
+  </div>
+  <div id="charts" class="charts">
+    <div class="add-chart" id="add-chart-block">
+      <button id="add-chart-btn" class="btn draw-border">Add Chart</button>
+    </div>
+  </div>
+  <div class="footer"></div>
+</body>
+<script src="js/socket.io.js"></script>
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+<script src="js/utils.js"></script>
+<script src="js/Chart.js"></script>
+<script src="js/index.js"></script>
+
+</html>
