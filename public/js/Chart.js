@@ -2,6 +2,7 @@ class Chart {
     constructor (socket, id, data) {
         this.socket = socket;
         this.id = id;
+        this.maxPoints = 105;
 
         addChartBlock(id);
         this.chart = Highcharts.chart(`chart_${id}`, data);
@@ -11,7 +12,8 @@ class Chart {
 
     addPoints(points) {
         for(let point of points) {
-            this.chart.series[0].addPoint(point, true, 1);
+            const shift = this.chart.series[0].data.length > this.maxPoints;
+            this.chart.series[0].addPoint(point, true, shift, false);
         }
     }
 

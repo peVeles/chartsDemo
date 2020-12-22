@@ -14,9 +14,7 @@ class Chart {
             data = Math.ceil(1.1 * data);
             if( data > 10000000) {data = 300000;}
             this.socket.emit('addPoints', [[++year, data]])
-
-            console.log('Emited new data');
-        }, 1000)
+        }, 200)
     }
 
     listen() {
